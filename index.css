@@ -1,0 +1,200 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #E0E8FF;
+    font-size: 16px;
+    font-family: "Red Hat Display";
+    font-weight: 500;
+}
+
+html {
+    height: 100vh;
+}
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+.background-image {
+    height: 437px;
+}
+.background-image, .background-image-mobile {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: bottom;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.background-image-mobile {
+    display: none;
+    height: 194px;
+}
+.card {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+
+.card-image {
+    width: 100%;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.card-content {
+    padding: 3rem;
+    background-color: #ffffff;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-content h1 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 37px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #1F2E55;
+}
+
+.card-content p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #717FA6;
+    margin: 0 2rem;
+}
+.card h4 {
+    margin: 2px 1rem;
+    color: #1F2E55;
+}
+.plan {
+    display: flex;
+    align-items: center;
+    background: #F7F9FF;
+    border-radius: 11px;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+.plan p {
+    margin-left: 1rem;
+    text-align: left;
+}
+.plan > div {
+    flex-grow: 1;
+}
+
+.plan > a {
+    color: #382AE1;
+}
+.plan > a:hover {
+    text-decoration: none;
+}
+
+.fluid-button {
+    background: #382AE1;
+    margin: 0 1.5rem;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    border-radius: 11px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    color: white;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.fluid-button:hover {
+    background-color: #766CF1;
+}
+
+.cancel {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 20px;
+    /* identical to box height */
+    color: #717FA6;
+    text-align: center;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    color: #1F2E55;
+}
+
+@media screen and (max-width: 640px) {
+    .background-image {
+        display: none;
+    }   
+    .background-image-mobile {
+        display: initial;
+    }
+    .card {
+        width: 327px;
+        max-width: calc(100% - 48px);       
+    }
+    body {
+        padding-top: 70px;
+    }
+    .card-content h1 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+    .card-content p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .card-content {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .plan {
+        flex-direction: column;
+    }
+    .plan > a {
+        margin-top: 1rem;
+    }
+    
+    .plan h4, .plan p {
+        margin: auto;
+        text-align: center;
+    }
+    .plan  h4 {
+        margin-top: 1rem;
+    }
+}
