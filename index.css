@@ -56,6 +56,7 @@ body {
 
 .card-content {
     padding: 3rem;
+    padding-top: 1.5rem;
     background-color: #ffffff;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
@@ -84,7 +85,7 @@ body {
     color: #717FA6;
     margin: 0 2rem;
 }
-.card h4 {
+.plan h4 {
     margin: 2px 1rem;
     color: #1F2E55;
 }
